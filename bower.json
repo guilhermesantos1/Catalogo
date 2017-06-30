@@ -1,0 +1,14 @@
+{
+  "name": "CatalogoCursosTED",
+  "authors": [
+    "Johnny Souto <johnny.souto@tedbrasil.com>"
+  ],
+  "description": "Catalogo de cursos da TED Brasil",
+  "main": "main.js",
+  "license": "MIT",
+  "homepage": "",
+  "devDependencies": {
+    "jquery": "2.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}

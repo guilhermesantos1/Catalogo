@@ -1,0 +1,118 @@
+<!--
+****************************
+RAPID LEARNING
+****************************
+-->
+<br />
+<div id="tabs">
+    <ul class="ulTabs rl">
+        <li cat='0' class="sel">Simuladores</li>
+    </ul>
+</div>
+
+<div id="thumbs">
+	<div id='nome'><span>Rapid Learning</span></div>
+
+    <a class='inline' href='#rl1'>
+		<div cat='1' dataimgFundo='rl/mitra_star.jpg'><img /><span>Simulador BHS MitraStar</span></div>
+	</a>
+
+	<a class='inline' href='#rl2'>
+		<div cat='1' dataimgFundo='rl/portabilidade_via_remedy.jpg'><img /><span>Portabilidade: Via Remedy - Call-Center</span></div>
+	</a>
+
+	<a class='inline' href='#rl3'>
+		<div cat='1' dataimgFundo='rl/ont_askey.jpg'><img /><span>Simulador ONT Askey</span></div>
+	</a>
+
+	<a class='inline' href='#rl4'>
+		<div cat='1' dataimgFundo='rl/desligue_temp.jpg'><img /><span>Desligue Temporário Vivo Internet Fixa</span></div>
+	</a>
+
+    <a class='inline' href='#rl5'>
+        <div cat='1' dataimgFundo='rl/icesp.jpg'><img /><span>Serviço Social em Oncologia</span></div>
+    </a>
+
+    <br />
+    <br />
+</div><!-- fim da div #thumbs -->
+
+<div id='modais'>
+	<div id='rl1' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/rl/mitra_star.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Simulador BHS MitraStar</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Conheça o equipamento BHS MitraStar e veja como realizar sua instalação nos clientes.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/Simulador_Mitra_Star/vcat/'>Ver</button>
+		</div>
+	</div>
+
+	<div id='rl2' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/rl/portabilidade_via_remedy.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Portabilidade: Via Remedy - Call-Center</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Conheça, detalhadamente, o funcionamento do programa para as tratativas de incidências de portabilidade: Remedy 8.1.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/BK_Portabilidade/vcat/'>Ver</button>
+		</div>
+	</div>
+
+	<div id='rl3' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/rl/ont_askey.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Simulador ONT Askey</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Através do simulador, você conhecerá o equipamento e será capaz de realizar sua instalação e configuração.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/simulador_ont_askey/flash/vcat/'>Ver</button>
+		</div>
+	</div>
+
+	<div id='rl4' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/rl/desligue_temp.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Desligue Temporário Vivo Internet Fixa</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Neste curso você conhecerá o procedimento de desligamento, que possibilita ao cliente, religar o serviço quando solicitado.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/Desligue_Temporario_Speedy/vcat/'>Ver</button>
+		</div>
+	</div>
+
+    <div id='rl5' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/rl/icesp.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Serviço Social em Oncologia</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Neste modulo desenvolvido para o ICESP (Instituto do Câncer do Estado de São Paulo), tratamos da importância da atuação do Serviço Social no atendimento dos pacientes oncológicos.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/Video_ICESP/curso08/mod08/servico_social_em_oncologia/v09/'>Ver</button>
+		</div>
+	</div>
+
+</div><!-- fim div #modais -->
+
+<br />
+
+<script>
+	tlThumbs = new TimelineLite({onReverseComplete:carregaPagina});
+	tlThumbs.pause();
+	tlThumbs.staggerFrom("#thumbs div", .5, {scale:0, opacity:0, ease:Expo.easeIn}, 0.1)
+	tlThumbs.from("#tabs",.5, {opacity:0, ease:Expo.easeIn});
+	setTimeout(function(){
+        tlThumbs.play();
+    },500)
+</script>

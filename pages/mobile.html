@@ -1,0 +1,83 @@
+<!--
+****************************
+MOBILE
+****************************
+-->
+<br />
+<div id="tabs">
+    <ul class="ulTabs mobile">
+        <li cat='0' class="sel">Educação Básica</li>
+    </ul>
+</div>
+<div id="thumbs">
+    <div id='nome'><span>Mobile</span></div>
+
+    <a class='inline' href='#mobile1'>
+		<div cat='1' dataimgFundo='mobile/angola.jpg'><img /><span>Aprendizado Móvel em Aula Digital</span></div>
+	</a>
+
+	<a class='inline' href='#mobile2'>
+		<div cat='1' dataimgFundo='mobile/er_matematica.jpg'><img /><span>Escolas Rurais Conectadas: Matemática</span></div>
+	</a>
+
+	<a class='inline' href='#mobile3'>
+		<div cat='1' dataimgFundo='mobile/er_quadrinhos.jpg'><img /><span>Escolas Rurais Conectadas: História em Quadrinhos</span></div>
+	</a>
+
+    <br />
+    <br />
+</div> <!-- fim da div #thumbs -->
+
+<div id='modais'>
+	<div id='mobile1' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/mobile/angola.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Aprendizado Móvel em Aula Digital</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>A Telefônica Educação Digital lança o piloto do Projeto Aprendizado Móvel em Aula Digital, na cidade de Luanda, em Angola.<br>O objetivo é contribuir para a igualdade de oportunidades para crianças e jovens, em regiões vulneráveis. Nesta unidade de Ciências, vamos aprender sobre os pontos cardeais, como utilizar um calendário, as estações do ano e os elementos que existem no universo.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='pages/angola/unidade_16/ciencias/'>Ver</button>
+		</div>
+	</div>
+
+	<div id='mobile2' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/mobile/er_matematica.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Escolas Rurais Conectadas: Matemática</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Ao usar a matemática para resolver problemas do cotidiano do aluno, levando em conta à cultura daquela sociedade, o aprendizado se torna mais natural.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/escola_rural/matematica/vcat/'>Ver</button>
+		</div>
+	</div>
+
+	<div id='mobile3' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/mobile/er_quadrinhos.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Escolas Rurais Conectadas: História em Quadrinhos</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Veja como utilizar as histórias em quadrinhos (HQs) na sala de aula, bem como suas funcionalidades na produção do texto oral/escrito, para enriquecer o conhecimento linguístico dos alunos.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/escola_rural/quadrinhos/vcat/'>Ver</button>
+		</div>
+	</div>
+
+</div><!-- fim div #modais -->
+
+<br />
+
+<script>
+	tlThumbs = new TimelineLite({onReverseComplete:carregaPagina});
+	tlThumbs.pause();
+	tlThumbs.staggerFrom("#thumbs div", .5, {scale:0, opacity:0, ease:Expo.easeIn}, 0.1)
+	tlThumbs.from("#tabs",.5, {opacity:0, ease:Expo.easeIn});
+	setTimeout(function(){
+        tlThumbs.play();
+    },500)
+</script>

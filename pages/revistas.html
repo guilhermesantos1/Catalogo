@@ -1,0 +1,117 @@
+<!--
+****************************
+REVISTAS
+****************************
+-->
+<br />
+<div id="tabs">
+    <ul class="ulTabs revistas">
+        <li cat='0' class="sel">Revistas Digitais</li>
+    </ul>
+</div>
+<div id="thumbs">
+	<div id='nome'><span>Publicações Eletrônicas</span></div>
+
+	<a class='inline' href='#revistas1'>
+		<div cat='1' dataimgFundo='revistas/infocontas_3ed.jpg'><img /><span>Revista INFOCONTAS<br />3ª Edição</span></div>
+	</a>
+
+	<a class='inline' href='#revistas2'>
+		<div cat='1' dataimgFundo='revistas/technews_1ed.jpg'><img /><span>Revista Tech News 1ª Edição</span></div>
+	</a>
+
+	<a class='inline' href='#revistas3'>
+		<div cat='1' dataimgFundo='revistas/vivo_melhoria_2ed.jpg'><img /><span>Revista Vivo em Melhoria<br />2ª Edição</span></div>
+	</a>
+
+    <a class='inline' href='#revistas4'>
+		<div cat='1' dataimgFundo='revistas/vivo_experienciar.jpg'><img /><span>Revista Vivo ExperienciAR</span></div>
+	</a>
+
+	<a class='inline' href='#revistas5'>
+		<div cat='1' dataimgFundo='revistas/diginews_2ed.jpg'><img /><span>Revista Diginews<br />2ª Edição</span></div>
+	</a>
+
+    <br />
+    <br />
+</div><!-- fim da div #thumbs -->
+
+<div id='modais'>
+	<div id='revistas1' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/revistas/infocontas_3ed.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Revista INFOCONTAS 3ª Edição</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Esta edição traz uma visão sobre a utilização consciente dos serviços Vivo e de como eles podem ajudar seus clientes com procedimentos como Parcelamento e Cobrança de Multas.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/Regua_do_Conhecimento_Escola_de_Contas_Revista_INFOCONTAS_3_Edicao/Revista/v05/'>Ver</button>
+		</div>
+	</div>
+
+	<div id='revistas2' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/revistas/technews_1ed.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Revista Tech News 1ª Edição</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Criada para tratar os principais temas abordados pelos clientes da Vivo. A 1ª edição trata-se de um tema que gera muitas dúvidas, o Bloqueio de Dados.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/Revista_Technews_1_Edicao/v06/'>Ver</button>
+		</div>
+	</div>
+
+	<div id='revistas3' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/revistas/vivo_melhoria_2ed.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Revista Vivo em Melhoria 2ª Edição</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Obtenha informações para ter argumentos sobre Serviços com Tecnologia Fibra Óptica, bem como Internet Fibra, TV Fibra e Internet Móvel.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/Revista_Vivo_em_Melhoria_2_Edicao/v01/'>Ver</button>
+		</div>
+	</div>
+
+	<div id='revistas4' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/revistas/vivo_experienciar.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Revista Vivo ExperienciAR</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Nesta revista digital, você conhecerá o conceito Vivo ExperienciAR, que unifica objetos de aprendizagem interativos com diferentes formas de ensinar.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/Revista_Vivo_Experienciar/v01/'>Ver</button>
+		</div>
+	</div>
+
+	<div id='revistas5' style='padding:10px; background:#fff; font-family:Ubuntu'>
+		<div class="imgModal">
+			<img src="img/thumbs/revistas/diginews_2ed.jpg" />
+		</div>
+		<div id='conteudoModal'>
+			<h4 class='tituloModal'>Revista Diginews 2ª Edição</h4><br>
+			<hr class='hrTituloModal'><br>
+			<p>Estamos cada vez mais conectados e interagindo digitalmente. Pensando nisso, esta edição aborda o consumo de dados, simplificando o assunto.</p>
+			<br>
+			<button type='button' class='btnVer' data-linkOpen='http://validacoes.tlsbr.com/Revista_Diginews/'>Ver</button>
+		</div>
+	</div>
+
+</div><!-- fim div #modais -->
+
+<br />
+
+<script>
+	tlThumbs = new TimelineLite({onReverseComplete:carregaPagina});
+	tlThumbs.pause();
+	tlThumbs.staggerFrom("#thumbs div", .5, {scale:0, opacity:0, ease:Expo.easeIn}, 0.1)
+	tlThumbs.from("#tabs",.5, {opacity:0, ease:Expo.easeIn});
+	setTimeout(function(){
+        tlThumbs.play();
+    },500)
+</script>

@@ -1,0 +1,368 @@
+/*
+Theme Name: Catálogo de Cursos - Telefônica Educação Digital
+Theme URL: http://validacoes.tlsbr.com/catalogo/2015/
+Description: Stylesheet do catalogo.
+Author: Guilherme Santos - Email: guilherme.santos@tlsbr.com
+Collaborator: Hugo Amaral
+Version: 1.0
+*/
+
+@font-face {
+	font-family: 'Ubuntu';
+	src:url('../fonts/Ubuntu.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* { margin: 0; padding: 0; vertical-align: baseline; }
+
+body { overflow: hidden; font-family: 'Ubuntu', 'Arial', sans-serif; }
+
+br { clear: both; }
+
+#imgFundo {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../img/foto_bg.jpg) no-repeat fixed;
+	-webkit-transition: all 1s;
+	-webkit-transition-delay: 1.5s;
+	transition: all 1s;
+	transition-delay: 1.5s;
+
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+		   background-cover: cover;
+			background-size: cover;
+}
+
+.blur {
+	-webkit-filter: blur(10px);
+	   -moz-filter: blur(10px);
+		 -o-filter: blur(10px);
+			filter: blur(10px);
+}
+
+#logo {
+	height: 78px;
+	margin: 30px;
+	position: absolute;
+	z-index: 999;
+	cursor: pointer;
+
+	-webkit-transition: background .4s;
+	   -moz-transition: background .4s;
+		 -o-transition: background .4s;
+			transition: background .4s;
+}
+
+/*=================================================================
+	Menu da home
+==================================================================*/
+#menu {
+	position: absolute;
+	height: 100%;
+	background: rgba(255,255,255,.3);
+}
+
+#navlist {
+	position: absolute;
+}
+
+#navlist div {
+	position: absolute;
+	/*width: 110px;
+	height: 119px;*/
+	width: 71px;
+	height: 69px;
+	cursor: pointer;
+}
+
+#navlist div img:nth-child(2) {
+	display: none;
+}
+
+#navlist div.atual img:nth-child(1) , #navlist div:hover img:nth-child(1) {
+	display: none;
+}
+
+#navlist div.atual img:nth-child(2) , #navlist div:hover img:nth-child(2) {
+	display: block;
+}
+
+#videos { margin: 120px 0 0 819px; }
+#rl { margin: 210px 0 0 979px; }
+#ilustras { margin: 385px 0 0 1008px; }
+#mobile { margin: 522px 0 0 880px; }
+#revistas { margin: 507px 0 0 696px; }
+#cc { margin: 355px 0 0 592px; }
+#jogos { margin: 180px 0 0 648px; }
+
+#menu #label {
+	position: absolute;
+	width: 300px;
+	margin: 350px 0 0 705px;
+	color: #FFF;
+	font-size: 45px;
+	text-align: center;
+}
+
+/*=================================================================
+	CustomScrollbar
+==================================================================*/
+#content {
+	height: 100%;
+	margin-left: 120px;
+	position: absolute;
+	background: rgba(0,0,0,0.1);
+}
+
+#centerContent {
+	margin: 50px auto 0;
+	width: 800px;
+	height: 80%;
+	display: none;
+}
+
+#centerContent.show { display: block; }
+
+/*=================================================================
+	Filtro das categorias
+==================================================================*/
+#centerContent #pages {}
+
+#centerContent #pages #tabs { height: 50px; font-family: Ubuntu; }
+
+#centerContent #pages #tabs .ulTabs {
+	width: 754px;
+	height: 50px;
+	list-style: none;
+	border: 3px solid #fff;
+}
+
+#centerContent #pages #tabs .ulTabs li {
+	width: 197px;
+	height: 50px;
+	text-align: center;
+	float: left;
+	line-height: 50px;
+	color: #FFF;
+}
+#centerContent #pages #tabs .ulTabs li:first-child { width: 163px; }
+
+#centerContent #pages #tabs .ulTabs li:hover , #centerContent #pages #tabs .ulTabs li.sel {
+	background: #FFF;
+	color: #007486;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#centerContent #pages #thumbs { margin-top: 20px; }
+
+#centerContent #pages #thumbs div img {
+	position: absolute;
+	width: 230px;
+	height: 250px;
+	margin: 0 0 0 0;
+	left: 0 !important;
+}
+
+/* Dropdown filtro */
+/* The container <div> - needed to position the dropdown content */
+
+/*#centerContent #pages #tabs .ulTabs .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+/*#centerContent #pages #tabs .ulTabs .dropdown-content {
+	margin: 50px 0px 0px 0px;
+	display: none;
+	line-height: 26px;
+    position: absolute;
+	border: 3px solid #fff;
+    min-width: 244px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+/*#centerContent #pages #tabs .ulTabs .dropdown-content a {
+	color: #FFF;
+    padding: 12px 16px;
+	text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+/*#centerContent #pages #tabs .dropdown-content a:hover {background:#FFF; color:#007486; font-weight:bold}
+
+/* Faz o dropdown aparecer quando houver o evento hover */
+/*#centerContent #pages #tabs .dropdown:hover .dropdown-content {
+	z-index: 1;
+    display: block;
+}
+
+/* Adaptacao de tamanho filtro categoria */
+.jogos { width: 750px !important; }
+
+.jogos li { width: 750px !important; }
+
+.rl li { width: 754px !important; }
+
+.mobile li { width: 754px !important; }
+
+.revistas li { width: 754px !important; }
+
+/* Configurações das DIV's do Filtro de categoria */
+#centerContent #pages #thumbs div {
+	width: 230px;
+	height: 250px;
+	overflow: hidden;
+	float: left;
+	line-height: 25px;
+	font-size: 23px;
+	color: #FFF;
+	text-align: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	margin: 17px 0 0 17px;
+	background-position: center center;
+}
+
+#centerContent #pages #thumbs div:hover {
+	box-shadow: 0px 0px 6px 2px #FFF;
+	background-color: rgba(0,0,0,1);
+
+	-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+		 -o-transition: all .5s;
+			transition: all .5s;
+}
+
+#centerContent #pages #thumbs div:hover img { opacity: .2; }
+
+#centerContent #pages #thumbs div span {
+	top: 36%;
+	position: relative;
+	opacity:0;
+
+	-webkit-transition: all .5s;
+	   -moz-transition: all .5s;
+		 -o-transition: all .5s;
+			transition: all .5s;
+}
+
+#centerContent #pages #thumbs div:hover span { opacity: 1; }
+
+/* Div com o nome de cada pagina */
+#centerContent #pages #thumbs #nome {
+	float: left;
+	width: 230px;
+	height: 250px;
+	font-size: 25px;
+	color:#FFF;
+	bottom: 0;
+	text-align: left;
+	text-transform: uppercase;
+	margin: 17px 0 0 17px;
+	background-color:rgba(0,0,0,0.3);
+}
+
+#centerContent #pages #thumbs #nome span {
+	opacity: 1;
+	margin-left: 15px;
+	top: 186px;
+	position: absolute;
+}
+
+/* Configuracoes Modal */
+#modais > div { display: none; }
+
+.imgModal {
+	margin:2px;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+
+.imgModal img {
+	position: fixed;
+	width:230px;
+	height:250px;
+	border: 1px solid #000;
+	box-shadow: 0px 0px 20px -5px;
+}
+
+#conteudoModal {
+	color:#717171;
+	font-size:16px;
+	text-align: left;
+	position: relative;
+	margin: 5px 5px;
+	top: 0;
+	right: 0;
+	margin-left: 42%;
+	margin-top: 0%;
+
+	-webkit-transition: all 1s;
+	   -moz-transition: all 1s;
+		 -o-transition: all 1s;
+			transition: all 1s;
+}
+
+.hrTituloModal { border: 1px solid #006476; }
+
+.tituloModal { color: #006476; font-size: 22px; font-weight: bold; }
+
+.btnVer {
+	color: #006476;
+	display: inline-block;
+	width: 160px;
+	height: 40px;
+	border: 2px solid #006476;
+	text-align: center;
+	font-size: 20px;
+	cursor: pointer;
+	margin-left: 94px;
+	opacity: 0.85;
+}
+
+.btnVer:hover { opacity: 1; }
+
+@media (min-height: 829px) and (max-height: 859px) {
+	.imgModal { margin: 7px 5px; }
+	.imgModal img { width: 230px; height: 250px; }
+	#conteudoModal { margin-left: 42%; margin-top: 1%; }
+}
+
+@media (min-height: 799px) and (max-height: 828px) {
+	.imgModal { margin: 17px 5px; }
+	.imgModal img { width: 210px; height: 230px; }
+	#conteudoModal { margin-left: 39%; margin-top: 3%; }
+}
+
+@media (min-height: 770px) and (max-height: 798px) {
+	.imgModal { margin: 24px 5px; }
+	.imgModal img { width: 190px; height: 210px; }
+	#conteudoModal { margin-left: 36%; margin-top: 4%; }
+}
+
+@media (min-height: 720px) and (max-height: 769px) {
+	.imgModal { margin: 25px 5px; }
+	.imgModal img { width: 170px; height: 190px; }
+	#conteudoModal { margin-left: 32%; margin-top: 3%; }
+}
+
+@media (min-height: 679px) and (max-height: 719px) {
+	.imgModal { margin: 25px 5px; }
+	.imgModal img { width: 150px; height: 170px; }
+	#conteudoModal { margin-left: 30%; margin-top: 4%; }
+}
+
+/*@media (min-height: 629px) and (max-height: 678px) {
+	.imgModal { margin: 0px 5px; }
+	.imgModal img { width: 160px; height: 160px; }
+	#conteudoModal { margin-left: 27%; }
+}*/

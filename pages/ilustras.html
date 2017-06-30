@@ -1,0 +1,55 @@
+<!--
+****************************
+ILUSTRAÇÕES
+****************************
+-->
+<br />
+<div id="tabs">
+    <ul class="ulTabs">
+        <li cat='0' class="sel">Todos</li>
+        <li cat='1'>Personagem</li>
+        <li cat='2'>Infográfico</li>
+        <li cat='3'>Cenário</li>
+    </ul>
+</div>
+
+<div id="thumbs">
+	<div id='nome'><span>Ilustrações</span></div>
+
+	<a class='group1' href='img/thumbs/ilustras/ilustra01.jpg'>
+		<div cat='1' dataimgFundo='ilustras/ilustra01P.jpg'><img /><span>Visualizar</span></div>
+	</a>
+
+	<a class='group2' href='#infografico'>
+		<div cat='2' dataimgFundo='ilustras/ilustra02P.jpg'><img /><span>Visualizar</span></div>
+	</a>
+
+	<a class='group1' href='img/thumbs/ilustras/ilustra03.jpg'>
+		<div cat='1' dataimgFundo='ilustras/ilustra03P.jpg'><img /><span>Visualizar</span></div>
+	</a>
+
+	<a class='group3' href='img/thumbs/ilustras/ilustra04.jpg'>
+	  <div cat='3' dataimgFundo='ilustras/ilustra04P.jpg'><img /><span>Visualizar</span></div>
+	</a>
+
+	<br />
+    <br />
+</div><!-- fim div #thumbs -->
+
+<div id='modais'>
+    <div id='infografico'>
+        <img src="img/thumbs/ilustras/ilustra02.jpg" width="100%" height="100%"/>
+    </div>
+</div><!-- fim div #modais -->
+
+<br />
+
+<script>
+	tlThumbs = new TimelineLite({onReverseComplete:carregaPagina});
+	tlThumbs.pause();
+	tlThumbs.staggerFrom("#thumbs div", .5, {scale:0, opacity:0, ease:Expo.easeIn}, 0.1)
+	tlThumbs.from("#tabs",.5, {opacity:0, ease:Expo.easeIn});
+	setTimeout(function(){
+        tlThumbs.play();
+    },500)
+</script>
