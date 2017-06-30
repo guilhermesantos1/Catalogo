@@ -1,1 +1,1 @@
-CatalogoCursosTED
+Catalogo
